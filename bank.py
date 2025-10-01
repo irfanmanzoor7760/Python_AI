@@ -1,16 +1,18 @@
-def main ():
+def main():
     # ask user for greeting
     greet = input("Greeting: ")
-    greeting(greet)
+    result = value(greet)
+    print("$" + str(result))
 
-def greeting(greet):
-    greeting = greet.strip().lower()
+def value(greeting):
+    greeting = greeting.lower()
 
-    if "hello" in greeting:
-        print("$0")
-    elif greeting.startswith("h") and greeting != "hello":
-        print("$20")
+    if greeting.startswith("hello"):
+        return 0
+    elif greeting.startswith("h"):
+        return 20
     else:
-        print("$100")
+        return 100
 
-main()
+if __name__ == "__main__":
+    main()
